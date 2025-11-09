@@ -50,24 +50,20 @@
 }
 
 
-Secondarymenus()  
-; my personal had a few more programs, but this is the basic idea. 
-
-{    
-    If WinActive("ahk_exe chrome.exe") || WinActive("ahk_exe chrome.exe") || WinActive("ahk_exe thorium.exe") || WinActive("ahk_exe firefox.exe")
-        {
+Secondarymenus() { ;  my personal had a few more programs, but this is the basic idea. 
+    If WinActive("ahk_exe chrome.exe") 
+    || WinActive("ahk_exe chrome.exe") 
+    || WinActive("ahk_exe thorium.exe") 
+    || WinActive("ahk_exe firefox.exe")        {
            Macropad.GetMenu("websites").Show()
            return
-        }
-     If WinActive("ahk_class CabinetWClass") 
-        {
-            Macropad.GetMenu("folders").Show()
-            return
-        }
-else
-{
-    Macropad.ShowMenu() ; if not specified, show the main menu.
-}
+    }
+    If WinActive("ahk_class CabinetWClass")     {
+        Macropad.GetMenu("folders").Show()
+        return
+    } else {
+        Macropad.ShowMenu() ; if not specified, show the main menu.
+    }
 }
 
 
